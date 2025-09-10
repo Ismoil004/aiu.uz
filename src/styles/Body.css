@@ -1,0 +1,394 @@
+.body1 {
+    background-image: url("/src/imgs/DSC_0673.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: relative;
+}
+
+/* Header - Glass effect */
+.body-hed {
+    backdrop-filter: blur(12px) saturate(180%);
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0.8;
+    display: flex;
+    position: relative; /* dropdown uchun baza */
+    justify-content: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    z-index: 10; /* hero section ustida */
+}
+.Body-text:hover .img-gg {
+color: #012152;
+    transform: rotate(180deg);
+}
+.anim-item {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.anim-item.from-left { transform: translateX(-80px) scale(0.8); }
+.anim-item.from-right { transform: translateX(80px) scale(0.8); }
+.anim-item.from-top { transform: translateY(-50px) scale(0.8); }
+.anim-item.from-bottom { transform: translateY(50px) scale(0.8); }
+
+.anim-item.animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+.body-hed:hover {
+    backdrop-filter: blur(20px) saturate(200%);
+    background: rgba(1, 33, 82, 0.7);
+}
+.card-body1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+/*height: auto;*/
+    padding-right: 40px;
+
+}
+.img-1{
+
+}
+/* Body-text menu */
+/* Body-text menu */
+.Body-text {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    margin-top: -30px;
+    gap: 10px;
+}
+.Body-text a{
+    text-decoration: inherit;
+    color: white;
+}
+.img-gg{
+    margin-top: -1px;
+}
+.Body-text:hover > span {
+    background: linear-gradient(90deg, #00d1ff, #012152);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Body-text:hover > a {
+    background: linear-gradient(90deg, #00d1ff, #012152);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Body-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00d1ff, #012152);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.Body-text:hover .dropdown-menu3  {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+.Body-text:hover::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown menu */
+/* Dropdown menu */
+.dropdown-menu3 {
+    position: absolute;
+    top: 100%;
+    left: 50%; /* Parent text markazidan */
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95); /* biroz shaffof */
+    backdrop-filter: blur(12px); /* zamonaviy glass effect */
+    color: #333;
+    min-width: 320px;
+    display: none;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    z-index: 9999;
+
+}
+
+
+.dropdown-menu3 a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #012152;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin: 0 0.5rem;
+}
+
+/* Hover effect on links */
+.dropdown-menu3 a:hover {
+    background: linear-gradient(135deg, #00c6ff33, #0072ff33); /* gradient bilan hover */
+    color: #0072ff; /* ko‘k rang hoverda */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,114,255,0.2);
+}
+
+.dropdown:hover .dropdown-menu3 {
+    display: flex;
+}
+
+/* Hero Section */
+.body1-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* dropdown header ustida chiqadi */
+
+    padding: 0 2rem;
+}
+
+.body1-card2 {
+    position: relative;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.body1-welcome {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: inline-block;
+    background: linear-gradient(90deg, #00d1ff, #012152);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.h2-box {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.text-body-1 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+/* Apply Now button */
+.apply-now-btn {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #00d1ff, #012152);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.apply-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.apply-now-btn:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.apply-now-btn:hover:before {
+    transform: rotate(45deg) translate(20%, 20%);
+}
+
+/* Animatsiya */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 488px) {
+    .body1-card2{
+        padding: 1rem;
+        height: 400px;
+    }
+    .body1-welcome{
+        font-size: 24px;
+    }.h2-box{
+         font-size: 14px;
+     }
+    .text-body-1{
+        font-size: 12px;
+    }
+    .apply-now-btn{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 870px) {
+    .menu-btn{
+        display: none;
+    }
+
+}
+@media (max-width: 870px) {
+
+
+
+    /* ===== Body Header Mobile Menu ===== */
+    .body-hed {
+        display: none; /* boshida yashirin */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(1, 33, 82, 0.95);
+        backdrop-filter: blur(12px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 5rem;
+        gap: 1.5rem;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+        pointer-events: none;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* ===== Menu Open ===== */
+    .body-hed.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+        animation: fadeInDown 0.3s ease forwards;
+    }
+
+    /* ===== Card Body Adjustments ===== */
+    .card-body1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    /* ===== Body-text items ===== */
+    .Body-text {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.8rem 0;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.3s ease;
+    }
+
+    /* Arrow icon rotation */
+    .Body-text .img-gg {
+        transition: transform 0.3s ease;
+    }
+    .Body-text.open .img-gg {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown menu mobile */
+
+
+    /* Dropdown show */
+    .Body-text.open .dropdown-menu3 {
+        display: flex;
+    }
+
+    /* Dropdown link hover */
+    .dropdown-menu3 a:hover {
+        background: rgba(0, 193, 255, 0.2);
+        transform: translateY(-2px);
+        color: #00d1ff;
+        box-shadow: 0 4px 12px rgba(0,193,255,0.2);
+    }
+
+    /* Hide specific images on mobile */
+    .img-1 {
+        display: none;
+    }
+
+    /* ===== Menu Button ===== */
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+        z-index: 2000;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInDown {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+}
+

@@ -1,0 +1,161 @@
+.section-body8 {
+    padding: 5rem 2rem;
+    /* Linear gradient fon, diagonal va zamonaviy */
+    background: linear-gradient(135deg, #001f3d 0%, #002b5c 50%, #004080 100%);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    /* Orqa fonda biroz animatsiya effektini qo‘shish */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.body8 {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.task-item {
+    flex: 0 0 calc((100% - 4rem)/3);
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15));
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.task-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-body8, .body-8-text-t h4, .body-8-text-t p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.img-body8.animate,
+.body-8-text-t h4.animate,
+.body-8-text-t p.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.body8-hed {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.body-8-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.chiziq3 {
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.body8-box {
+    overflow: hidden;
+}
+
+.slide-body8 {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.6s ease-in-out;
+}
+
+
+
+.task-item {
+    flex: 0 0 calc((100% - 4rem)/3);
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15));
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.img-body8 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.3);
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.task-item:hover .img-body8 {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.body8-img3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-8text {
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+    color: #f0f0f0;
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .task-item { flex: 0 0 calc((100% - 2rem)/2); }
+}
+
+@media (max-width: 600px) {
+
+    .task-item{
+        flex: 0 0 50%;
+
+    }
+    .slide-body8 {
+        display: flex;
+        gap: 2rem;
+        transition: transform 0.3s ease-in-out !important;
+    }
+}

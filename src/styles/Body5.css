@@ -1,0 +1,98 @@
+.body5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #012152, #1a3a6e,#1a3a6e,#00b3e6);
+    background-size: 800% 800%; /* gradientni kengaytirish */
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Radial glow overlay */
+.body5::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle at 30% 30%, #1a3a6e, transparent 70%);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Text Styles */
+.text-body5 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.body5-box-t {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #cce0ff;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto; /* gorizontal markaz va bottom spacing */
+
+    line-height: 1.8rem;
+    position: relative;
+    z-index: 1;
+}
+.anim-item {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.anim-item.from-left { transform: translateX(-80px) scale(0.8); }
+.anim-item.from-right { transform: translateX(80px) scale(0.8); }
+.anim-item.from-top { transform: translateY(-50px) scale(0.8); }
+.anim-item.from-bottom { transform: translateY(50px) scale(0.8); }
+
+.anim-item.animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+
+.btn-body5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.85rem 2.5rem;
+    border-radius: 50px;
+    border: 2px solid #00c6ff;
+    background-color: transparent;
+    color: #00c6ff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    /* Darrov hover bo‘lishi uchun hamma transition olib tashlandi */
+    transition: none !important;
+}
+
+.btn-body5:hover {
+    /* Darrov hover effekti */
+    color: #ffffff !important;
+    background: #00c6ff !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 8px 25px rgba(0,198,255,0.6) !important;
+}

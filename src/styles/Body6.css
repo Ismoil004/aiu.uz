@@ -1,0 +1,124 @@
+/* Body6 Styles */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.body6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem auto;
+    position: relative;
+    max-width: 1600px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #012152, #1a3a6e,#1a3a6e,#00b3e6);
+    background-size: 800% 800%; /* gradientni kengaytirish */
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    animation: gradientBG 15s ease infinite;
+}
+
+.body6::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 70%);
+    z-index: 0;
+}
+
+.body6-box {
+    display: none; /* old background image removed for modern design */
+}
+/* Matn satrlari uchun animatsiya */
+/* Matn satrlari uchun animatsiya */
+.text-body6-t span {
+    display: block; /* har satr yangi qatorda */
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+/* Sekin chiqish effekti */
+.fadeInUp {
+    animation: fadeUp 1s ease forwards; /* 1s davom etadi */
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.body6-box2 {
+    width: 50%;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.text-body6 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 3rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.text-body6-t {
+    font-size: 1.125rem;
+    line-height: 1.9rem;
+    color: rgba(255,255,255,0.85);
+    margin-top: 1rem;
+}
+
+.body6-box3 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.img-body6 {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.img-body6:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .body6 {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    .body6-box2, .body6-box3 {
+        width: 100%;
+    }
+    .text-body6 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .text-body6-t {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+}
