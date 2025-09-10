@@ -36,7 +36,6 @@ function Body7() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
 
-    // IntersectionObserver for card + text animations
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {

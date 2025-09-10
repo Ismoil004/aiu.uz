@@ -33,7 +33,6 @@ function Body9() {
 
     const containerRef = useRef(null);
 
-    // IntersectionObserver for cards animation
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {

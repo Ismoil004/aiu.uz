@@ -27,13 +27,11 @@ function Body8() {
     const loopedImages = [...images, ...images];
     const slideWidth = 100 / 3;
 
-    // Slider autoplay
     useEffect(() => {
         const interval = setInterval(() => setCurrentIndex(prev => prev + 1), 4000);
         return () => clearInterval(interval);
     }, []);
 
-    // Loop reset
     useEffect(() => {
         if (currentIndex >= tasks.length) {
             setTimeout(() => {
@@ -49,7 +47,6 @@ function Body8() {
         }
     }, [currentIndex, tasks.length]);
 
-    // IntersectionObserver for card + text animation
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -60,10 +57,8 @@ function Body8() {
                         const title = el.querySelector('.body-8-text-t h4');
                         const text = el.querySelector('.body-8-text-t p');
 
-                        // Animate card itself
                         setTimeout(() => el.classList.add('animate'), i * 200);
 
-                        // Animate inner elements
                         if(img) setTimeout(() => img.classList.add('animate'), i * 250);
                         if(title) setTimeout(() => title.classList.add('animate'), i * 300);
                         if(text) setTimeout(() => text.classList.add('animate'), i * 350);

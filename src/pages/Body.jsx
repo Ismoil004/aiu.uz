@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../styles/Body.css";
 import logo from "../imgs/logo_aiu.svg";
-import {useNavigate} from "react-router-dom";
 
 function Body() {
     const bodyRef = useRef(null);
-    const [menuOpen, setMenuOpen] = useState(false); // ✅ qo‘shildi
-    const [activeDropdown, setActiveDropdown] = useState(null); // ✅ qaysi ochilganini saqlash
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {

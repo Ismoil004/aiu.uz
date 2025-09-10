@@ -13,7 +13,7 @@ import Body9 from "./Body9.jsx";
 import Body10 from "./Body10.jsx";
 import Body11 from "./Body11.jsx";
 import Footer from "../components/Footer.jsx";
-function LandingPage(props) {
+function LandingPage() {
     return (
         <div>
             <Header/>

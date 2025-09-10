@@ -10,16 +10,15 @@
     position: relative;
 }
 
-/* Header - Glass effect */
 .body-hed {
     backdrop-filter: blur(12px) saturate(180%);
     background: rgba(0, 0, 0, 0.25);
     opacity: 0.8;
     display: flex;
-    position: relative; /* dropdown uchun baza */
+    position: relative;
     justify-content: center;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    z-index: 10; /* hero section ustida */
+    z-index: 10;
 }
 .Body-text:hover .img-gg {
 color: #012152;
@@ -50,15 +49,12 @@ color: #012152;
     justify-content: center;
     align-items: center;
     gap: 43px;
-/*height: auto;*/
     padding-right: 40px;
 
 }
 .img-1{
 
 }
-/* Body-text menu */
-/* Body-text menu */
 .Body-text {
     position: relative;
     font-size: 0.9rem;
@@ -110,15 +106,14 @@ color: #012152;
     transform: scaleX(1);
 }
 
-/* Dropdown menu */
-/* Dropdown menu */
+
 .dropdown-menu3 {
     position: absolute;
     top: 100%;
-    left: 50%; /* Parent text markazidan */
+    left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.95); /* biroz shaffof */
-    backdrop-filter: blur(12px); /* zamonaviy glass effect */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
     color: #333;
     min-width: 320px;
     display: none;
@@ -143,10 +138,9 @@ color: #012152;
     margin: 0 0.5rem;
 }
 
-/* Hover effect on links */
 .dropdown-menu3 a:hover {
-    background: linear-gradient(135deg, #00c6ff33, #0072ff33); /* gradient bilan hover */
-    color: #0072ff; /* ko‘k rang hoverda */
+    background: linear-gradient(135deg, #00c6ff33, #0072ff33);
+    color: #0072ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,114,255,0.2);
 }
@@ -155,14 +149,13 @@ color: #012152;
     display: flex;
 }
 
-/* Hero Section */
 .body1-div {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1; /* dropdown header ustida chiqadi */
+    z-index: 1;
 
     padding: 0 2rem;
 }
@@ -204,7 +197,6 @@ color: #012152;
     margin-bottom: 2rem;
 }
 
-/* Apply Now button */
 .apply-now-btn {
     position: relative;
     display: inline-block;
@@ -242,7 +234,6 @@ color: #012152;
     transform: rotate(45deg) translate(20%, 20%);
 }
 
-/* Animatsiya */
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(30px);}
     100% { opacity: 1; transform: translateY(0);}
@@ -274,9 +265,8 @@ color: #012152;
 
 
 
-    /* ===== Body Header Mobile Menu ===== */
     .body-hed {
-        display: none; /* boshida yashirin */
+        display: none;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -296,7 +286,6 @@ color: #012152;
         transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
-    /* ===== Menu Open ===== */
     .body-hed.show {
         display: flex;
         justify-content: center;
@@ -308,7 +297,6 @@ color: #012152;
         animation: fadeInDown 0.3s ease forwards;
     }
 
-    /* ===== Card Body Adjustments ===== */
     .card-body1 {
         display: flex;
         flex-direction: column;
@@ -317,7 +305,6 @@ color: #012152;
         width: 90%;
     }
 
-    /* ===== Body-text items ===== */
     .Body-text {
         width: 100%;
         font-size: 1rem;
@@ -333,7 +320,6 @@ color: #012152;
         transition: color 0.3s ease;
     }
 
-    /* Arrow icon rotation */
     .Body-text .img-gg {
         transition: transform 0.3s ease;
     }
@@ -341,15 +327,12 @@ color: #012152;
         transform: rotate(180deg);
     }
 
-    /* Dropdown menu mobile */
 
 
-    /* Dropdown show */
     .Body-text.open .dropdown-menu3 {
         display: flex;
     }
 
-    /* Dropdown link hover */
     .dropdown-menu3 a:hover {
         background: rgba(0, 193, 255, 0.2);
         transform: translateY(-2px);
@@ -357,12 +340,10 @@ color: #012152;
         box-shadow: 0 4px 12px rgba(0,193,255,0.2);
     }
 
-    /* Hide specific images on mobile */
     .img-1 {
         display: none;
     }
 
-    /* ===== Menu Button ===== */
     .menu-btn {
         display: block;
         position: absolute;
@@ -385,7 +366,6 @@ color: #012152;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    /* ===== Animations ===== */
     @keyframes fadeInDown {
         0% { opacity: 0; transform: translateY(-20px); }
         100% { opacity: 1; transform: translateY(0); }

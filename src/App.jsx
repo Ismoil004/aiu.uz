@@ -1,5 +1,4 @@
-import {Navigate, Route, Routes} from "react-router-dom";
-import Header from "./components/Header.jsx";
+import {Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage.jsx";
 import NotFound from "./404/NotFound.jsx";
 

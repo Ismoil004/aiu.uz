@@ -8,7 +8,7 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #012152, #1a3a6e,#1a3a6e,#00b3e6);
-    background-size: 800% 800%; /* gradientni kengaytirish */
+    background-size: 800% 800%;
     animation: gradientBG 15s ease infinite;
 }
 
@@ -19,7 +19,6 @@
 }
 
 
-/* Radial glow overlay */
 .body5::before {
     content: '';
     position: absolute;
@@ -32,7 +31,6 @@
     z-index: 0;
 }
 
-/* Text Styles */
 .text-body5 {
     font-size: 3rem;
     font-weight: 800;
@@ -49,7 +47,7 @@
     font-weight: 500;
     color: #cce0ff;
     max-width: 600px;
-    margin: 0 auto 2.5rem auto; /* gorizontal markaz va bottom spacing */
+    margin: 0 auto 2.5rem auto;
 
     line-height: 1.8rem;
     position: relative;
@@ -84,13 +82,10 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-
-    /* Darrov hover bo‘lishi uchun hamma transition olib tashlandi */
     transition: none !important;
 }
 
 .btn-body5:hover {
-    /* Darrov hover effekti */
     color: #ffffff !important;
     background: #00c6ff !important;
     transform: translateY(-3px) scale(1.05) !important;

@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* parallax effekt */
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(1, 33, 82, 0.7); /* yarim shaffof overlay */
+    background-color: rgba(1, 33, 82, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +81,6 @@
     opacity: 0.9;
 }
 
-/* Raqam animatsiyasi */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -110,7 +109,6 @@
     }
     
 }
-/* Responsive */
 @media (max-width: 768px) {
 
     .section10 {

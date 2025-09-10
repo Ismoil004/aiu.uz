@@ -15,8 +15,6 @@ function Body6() {
                         el.classList.add('animate');
                     });
 
-                    // Har bir text-body6-t ichidagi spanlarni navbat bilan animatsiya qilish
-                    // useEffect ichida:
                     const textLines = bodyRef.current.querySelectorAll('.text-body6-t span');
                     textLines.forEach((span, i) => {
                         span.style.animationDelay = `${i * 0.5}s`; // har bir satr 0.6s kechikadi

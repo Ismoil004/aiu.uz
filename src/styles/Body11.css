@@ -69,7 +69,6 @@
     background: #355edb;
 }
 
-/* Bottom cards */
 .card-body11 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,7 +106,6 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
-/* Top va bottom cards uchun fadeInUp animatsiya */
 .box11-card, .card-body-t {
     opacity: 0;
     transform: translateY(30px);
@@ -119,7 +117,6 @@
     transform: translateY(0);
 }
 
-/* Matn ichidagi animatsiya (agar kerak bo'lsa) */
 .box11-text, .box11-text1, .box11-text2, .text-body13 {
     opacity: 0;
     transform: translateY(20px);

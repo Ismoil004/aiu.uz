@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import "../styles/Body4.css";
-
 import academicImg from "../imgs/academic-activities.jfif";
 import scientificImg from "../imgs/scientific-activities.jfif";
 import sportImg from "../imgs/sport-activities.jfif";

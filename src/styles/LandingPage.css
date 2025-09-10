@@ -5,7 +5,6 @@
     font-family: MagnetTrial, sans-serif;
 }
 
-/* Scrollbar */
 *::-webkit-scrollbar {
     width: 10px;
 }
@@ -16,14 +15,12 @@
     background: #f1f1f1;
 }
 
-/* Section animatsiyasi */
 .landing-section {
     opacity: 0;
     transform: scale(0.8);
     transition: all 0.8s ease-out;
 }
 
-/* Animatsiya yo'nalishlari */
 .landing-section.from-left {
     transform: translateX(-100px) scale(0.8);
 }
@@ -36,14 +33,12 @@
     transform: translateY(50px) scale(0.8);
 }
 
-/* Animatsiya qo‘llanganda */
 .landing-section.animate {
     opacity: 1;
     transform: translateX(0) translateY(0) scale(1);
     transition: all 0.8s ease-out;
 }
 
-/* Domino effekt: har bir sectionga kechikish */
 .landing-section:nth-child(1).animate { transition-delay: 0.1s; }
 .landing-section:nth-child(2).animate { transition-delay: 0.3s; }
 .landing-section:nth-child(3).animate { transition-delay: 0.5s; }

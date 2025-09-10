@@ -29,7 +29,6 @@ function Body3() {
     const intervalRef = useRef(null);
     const bodyRef = useRef(null);
 
-    // Slider
     useEffect(() => {
         if (!isPaused) {
             intervalRef.current = setInterval(() => {
@@ -39,7 +38,6 @@ function Body3() {
         return () => clearInterval(intervalRef.current);
     }, [isPaused, totalSlides]);
 
-    // Scroll Animatsiya
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
