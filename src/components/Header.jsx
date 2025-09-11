@@ -106,9 +106,10 @@ function Header() {
          </div>
             <div className={"headerBottom"}>
                 <div className={"wrapper2"}>
+
                     <div className={"headerBottomText"}>
                         <a className={"headerBottomText2"} href="https://library.oxu.uz">Library</a>
-                        <a className={"headerBottomText2"} >News & Events</a>
+                        <a className={"headerBottomText2"} href={"https://aiu.uz/news/all"}>News & Events</a>
                         <a className={"headerBottomText2"} href="https://int.vacancy.oxu.uz/">Career @ OXU</a>
                         <a className={"headerBottomText2"} href="https://aiu.uz/international-form">Apply Now</a>
                     </div>

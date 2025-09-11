@@ -12,7 +12,6 @@ header {
     z-index: 9999;
 }
 
-/* ===== Top Header ===== */
 .headerTop {
     background: linear-gradient(90deg, #012152, #023e8a);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -27,7 +26,7 @@ header {
     gap: 20px;
 }
 
-/* Text blocks */
+
 .headerTopText {
     display: flex;
     flex-direction: column;
@@ -54,13 +53,12 @@ header {
     color: #c0c0c0;
 }
 
-/* Separator */
 .headerTopBorder {
     height: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Social icons */
+
 .imgs {
     display: flex;
     align-items: center;
@@ -83,7 +81,7 @@ header {
     fill: #90e0ef;
 }
 
-/* ===== Bottom Header ===== */
+
 .headerBottom {
     background: rgba(1, 33, 82, 0.95);
     backdrop-filter: blur(8px);
@@ -95,7 +93,13 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+
 }
+
+
 
 /* Navigation links */
 .headerBottomText {

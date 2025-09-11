@@ -31,6 +31,7 @@ function togglebtn (){
 }    const toggleDropdown = (index) => {
         setActiveDropdown(activeDropdown === index ? null : index);
     };
+
     return (
         <div className="body1" ref={bodyRef}>
             <div >
@@ -138,7 +139,6 @@ function togglebtn (){
                 </div>
             </div>
 
-            {/* Hero Section */}
             <div className="body1-div anim-item from-bottom">
                 <div className="body1-card2">
                     <span className="body1-welcome anim-item from-left">Welcome to AIU</span>
@@ -157,31 +157,6 @@ function togglebtn (){
     );
 }
 
-// Dropdown as separate component
-function DropdownMenu({ item }) {
-    const [open, setOpen] = useState(false);
 
-    return (
-        <div
-            className="Body-text anim-item from-right"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-        >
-            <span>{item.title}</span>
-            {item.links && (
-                <>
-                    <svg className="img-gg" viewBox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-                        <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                    </svg>
-                    <div className="dropdown-menu3" style={{ display: open ? "flex" : "none" }}>
-                        {item.links.map((link, i) => (
-                            <a key={i} href="#">{link}</a>
-                        ))}
-                    </div>
-                </>
-            )}
-        </div>
-    );
-}
 
 export default Body;
