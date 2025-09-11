@@ -4,7 +4,6 @@ import "./Header.css"
 
 function Header() {
 
-
     return (
         <header>
          <div className={"headerTop"}>
@@ -18,16 +17,21 @@ function Header() {
                      <a href="tel:+998500305876">+998 50 030 58 76</a>
                      <span className={"headerTopSpan"}>Hotline for applicants</span>
                  </div>
+
                  <div className={"headerTopBorder"}></div>
                  <div className={"headerTopText"}>
                      <a href="mailto:info@uz">Contacts</a>
                      <span className={"headerTopSpan"}>Address and telephone</span>
-                 </div>   <div className={"headerTopBorder"}></div>
+                 </div>
+                 <div className={"headerTopBorder"}></div>
                  <div className={"headerTopBorder"}></div>
                  <div className={"headerTopText"}>
+
                      <a href="https://student.oxu.uz/">Student HEMIS</a>
                      <span className={"headerTopSpan"}>Student information system</span>
-                 </div>   <div className={"headerTopBorder"}></div>
+                 </div>
+
+                 <div className={"headerTopBorder"}></div>
                  <div className={"headerTopText"}>
                      <a  href="https://hemis.oxu.uz/">HEMIS</a>
                      <span className={"headerTopSpan"}>University management system</span>
@@ -45,9 +49,8 @@ function Header() {
                                        fill="white"></path>
                              </svg>
                          </a>
-
-
                      </div>
+
                      <div className={"headerTopBorder"}></div>
                      <div className={"headerTopText2"}>
                          <a href="https://www.instagram.com/aiu.uzb/">
@@ -106,7 +109,6 @@ function Header() {
          </div>
             <div className={"headerBottom"}>
                 <div className={"wrapper2"}>
-
                     <div className={"headerBottomText"}>
                         <a className={"headerBottomText2"} href="https://library.oxu.uz">Library</a>
                         <a className={"headerBottomText2"} href={"https://aiu.uz/news/all"}>News & Events</a>
