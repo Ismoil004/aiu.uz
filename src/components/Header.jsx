@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Header.css"
 
 
-function Header() {
+function Header({ onSearch }) {
+    const [query, setQuery] = useState("");
 
+    const handleSubmit = () => {
+        if (onSearch && query.trim()) {
+            onSearch(query.trim()); // LandingPage ga yuboramiz
+        }
+    };
     return (
         <header>
          <div className={"headerTop"}>
@@ -26,11 +32,11 @@ function Header() {
                  <div className={"headerTopBorder"}></div>
                  <div className={"headerTopBorder"}></div>
                  <div className={"headerTopText"}>
-
                      <a href="https://student.oxu.uz/">Student HEMIS</a>
                      <span className={"headerTopSpan"}>Student information system</span>
                  </div>
-
+                 <div>
+                 </div>
                  <div className={"headerTopBorder"}></div>
                  <div className={"headerTopText"}>
                      <a  href="https://hemis.oxu.uz/">HEMIS</a>
@@ -117,15 +123,20 @@ function Header() {
                     </div>
                     <div className={"d-flex align-items-center gap-5 headerDiv"}>
                         <div className={"form-header2"}>
-                            <button className={"headerButton"}>
+                            <button onClick={handleSubmit} className={"headerButton"}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24}>
                                     <g opacity={0.7}>
                                         <path d="M16.84 14.8446C17.5973 13.7072 18.0009 12.3711 18 11.0046C18.0021 9.44672 17.4844 7.93263 16.5289 6.70213C15.5733 5.47162 14.2347 4.59504 12.7248 4.21118C11.2149 3.82731 9.62007 3.95812 8.1929 4.58287C6.76573 5.20762 5.58776 6.29062 4.84552 7.66037C4.10328 9.03011 3.83919 10.6083 4.09508 12.1451C4.35096 13.6819 5.11219 15.0894 6.25823 16.1447C7.40426 17.2 8.8696 17.8429 10.4222 17.9715C11.9748 18.1001 13.526 17.7071 14.83 16.8546L18 20.0046L20 18.0046L16.84 14.8446ZM6 11.0046C6 10.0157 6.29325 9.04904 6.84266 8.22679C7.39206 7.40455 8.17296 6.76368 9.08659 6.38525C10.0002 6.00681 11.0056 5.90779 11.9755 6.10072C12.9454 6.29364 13.8363 6.76985 14.5355 7.46911C15.2348 8.16837 15.711 9.05929 15.9039 10.0292C16.0969 10.9991 15.9978 12.0044 15.6194 12.9181C15.241 13.8317 14.6001 14.6126 13.7779 15.162C12.9556 15.7114 11.9889 16.0046 11 16.0046C9.67392 16.0046 8.40215 15.4779 7.46447 14.5402C6.52679 13.6025 6 12.3307 6 11.0046Z" fill="white"></path>
                                     </g>
                                 </svg>
                             </button>
-                            <input type="text" placeholder={"Search..."} className={"input-search"}/>
-                        </div>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="input-search"
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                            />                        </div>
                         <div className="pers">
                             Personal Cabinet
                             <svg className="img-gg" viewBox="64 64 896 896" width="1em" height="1em" fill="currentColor">

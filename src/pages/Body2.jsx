@@ -43,7 +43,7 @@ function Body2() {
                             { img: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", title: "CODE & INNOVATE", desc: "BSIT (Bachelor of Science in Information Technology)" },
                             { img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80", title: "Global & Strategic Leadership", desc: "MBA (Master of Business Administration)" }
                         ].map((card, index) => (
-                            <div className="body2-card2 anim-item" key={index}
+                            <div key={index}
                                  className={`body2-card2 anim-item ${index % 2 === 0 ? 'from-left' : 'from-right'}`}>
                                 <img className="img-body" src={card.img} alt={card.title}/>
                                 <div className="img-div">
